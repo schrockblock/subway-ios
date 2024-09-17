@@ -1,0 +1,35 @@
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    setup_circle_ci
+  end
+  
+  desc "Runs all the tests"
+  lane :test do
+    scan
+  end
+  
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    increment_build_number(xcodeproj: "SubwayMap.xcodeproj")
+    match(type: "appstore")
+    build_app(workspace: "SubwayMap.xcworkspace", scheme: "SubwayMap")
+    upload_to_testflight
+  end
+  
+  desc "Deliver screenshots"
+  lane :snap do
+    capture_screenshots
+    upload_to_app_store
+  end
+  
+  desc "Deploy the app"
+  lane :release do
+    match(type: "appstore")
+    build_app(scheme: "SubwayMap",
+              workspace: "SubwayMap.xcworkspace",
+              include_bitcode: true)
+    upload_to_app_store
+  end
+end

@@ -1,0 +1,55 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "keyword": {
+      "fonts": [
+        {
+          "font": "./fonts/AvenirNext-DemiBold.ttf",
+          "supported": ["de-DE", "en-US", "es-ES", "fr-FR", "it-IT", "nl-NL", "sv-SE", "pt-BR"]
+        }
+      ],
+      "color": "#df03a6"
+    },
+    "title": {
+      "fonts": [
+        {
+          "font": "./fonts/AvenirNext-Regular.ttf",
+          "supported": ["de-DE", "en-US", "es-ES", "fr-FR", "it-IT", "nl-NL", "sv-SE", "pt-BR"]
+        }
+      ],
+      "color": "#ffffff"
+    },
+    "background": "./bg.png",
+    "show_complete_frame": false,
+    "stack_title" : true,
+    "frame": "WHITE",
+    "use_platform": "IOS",
+    "padding": 50
+  },
+  "data": [
+    {
+      "filter": "offline",
+      "keyword": {
+        "color": "#df03a6"
+      }
+    },
+    {
+      "filter": "clear",
+      "keyword": {
+        "color": "#df03a6"
+      }
+    },
+    {
+      "filter": "directions",
+      "keyword": {
+        "color": "#df03a6"
+      }
+    },
+    {
+      "filter": "crowdsourced",
+      "keyword": {
+        "color": "#df03a6"
+      }
+    }
+  ]
+}

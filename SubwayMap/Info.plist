@@ -40,10 +40,48 @@
 			</dict>
 		</array>
 	</dict>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-6130214134299389~7327697750</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>192.168.0.133:8081</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSTemporaryThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>If you're seeing this, please email the developer.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>If you're seeing this, please email the developer.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We use this to show you the nearest station and send you navigation reminders when you should get off the train</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use this to send you navigation reminders when you should get off the train</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use this to determine the closest station to you.</string>
 	<key>ShowLines</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -1,0 +1,5 @@
+app_identifier("com.thryv.SubwayMap") # The bundle identifier of your app
+apple_id("elliot@lithobyte.co") # Your Apple email address
+
+itc_team_id("118600484") # App Store Connect Team ID
+team_id("HK6WSAR793") # Developer Portal Team ID

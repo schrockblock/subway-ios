@@ -11,7 +11,7 @@ import GTFSStationsParis
 import SubwayStations
 import ZipArchive
 
-class DatabaseLoader: NSObject {
+public class DatabaseLoader: NSObject {
     static var isDatabaseReady: Bool = false
     static var stationManager: StationManager!
     static let NYCDatabaseLoadedNotification = "PARDatabaseLoadedNotification"
@@ -22,7 +22,7 @@ class DatabaseLoader: NSObject {
         return self.documentsDirectory + "/" + "gtfs.db"
     }
     
-    class func loadDb() {
+    public class func loadDb() {
         unzipDBToDocDirectoryIfNeeded()
         do {
             stationManager = try PARStationManager(sourceFilePath: destinationPath)
@@ -35,7 +35,7 @@ class DatabaseLoader: NSObject {
         }
     }
     
-    class func unzipDBToDocDirectoryIfNeeded(){
+    public class func unzipDBToDocDirectoryIfNeeded(){
         if !FileManager.default.fileExists(atPath: destinationPath) {
             let sourcePath = Bundle.main.path(forResource: "gtfs.db", ofType: "zip")
             var error: NSError?

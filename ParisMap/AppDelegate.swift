@@ -12,6 +12,7 @@ import Crashlytics
 import SBNag_swift
 import GTFSStationsParis
 import SubwayStations
+import PlaygroundVCHelpers
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let mapVC = MapViewController(nibName: "MapViewController", bundle: nil)
+        let mapVC = MapViewController.makeFromXIB()
         
         let navVC = AdNavigationController(rootViewController: mapVC)
         window?.rootViewController = navVC;

@@ -10,6 +10,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import NagController
+import PlaygroundVCHelpers
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, NagControllerDelegate {
@@ -32,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NagControllerDelegate {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        let mapVC = MapViewController(nibName: "MapViewController", bundle: nil)
+        let mapVC = MapViewController.makeFromXIB()
         
         let navVC = UINavigationController(rootViewController: mapVC)
         window?.rootViewController = navVC;
